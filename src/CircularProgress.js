@@ -8,10 +8,10 @@ const { Surface, Shape, Path, Group } = ART;
 export default class CircularProgress extends React.Component {
 
   circlePath(cx, cy, r, startDegree, endDegree) {
-
+    let endDegreeInRadians = (endDegree * Math.PI) / 180;
     let p = Path();
-    p.path.push(0, cx + r, cy);
-    p.path.push(4, cx, cy, r, startDegree * Math.PI / 180, endDegree * Math.PI / 180, 1);
+    p.move(cx + r, cy);
+    p.arc(-r + r * Math.cos(endDegreeInRadians), r * Math.sin(endDegreeInRadians), r, r, endDegree >= 180);
     return p;
   }
 
