@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/bgryszko/react-native-circular-progress",
   "dependencies": {
-    "art": "^0.10.0"
+    "fk-art": "0.0.1"
   }
 }
